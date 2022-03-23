@@ -4,5 +4,5 @@
 <h4>Aditya Raj</h4>
 <h4>Atishay Jain</h2>
 <h4>Prateek Khandelwal</h4>
-<h2> Glad to see you here!! </h2>
+<h2> Glad to see you here. </h2>
 </center>
