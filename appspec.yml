@@ -4,10 +4,3 @@ files:
   - source: /
     destination: /opt/tomcat/webapps/
 
-hooks:
-ApplicationStart:
-  ApplicationStart:
-    – location: tomcat_start.sh
-      timeout: 300
-      runas: root
-
