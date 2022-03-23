@@ -2,5 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
+    destination: /opt/tomcat/webapps/
+
+hooks:
+  ApplicationStart:
+    – location: tomcat_start.sh
+      timeout: 300
+      runas: root
 
