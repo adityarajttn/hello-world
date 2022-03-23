@@ -28,9 +28,9 @@ pipeline {
                 sh 'echo "Hello"'
                 sh 'ls'
                 sh 'pwd'
-                sh 'cp webapp/target/webapp.war .'
-                sh 'rm -rf Dockerfile README.md appspec.yml pom.xml server/ webapp Jenkinsfile'
-                sh "zip webapp.zip webapp.war"
+                sh 'sudo cp webapp/target/webapp.war .'
+                sh 'sudo rm -rf Dockerfile README.md appspec.yml pom.xml server/ webapp Jenkinsfile'
+                sh "sudo zip webapp.zip webapp.war"
                 sh "aws deploy push --application-name cicd-codedeploy --s3-location s3://cicd-project-adyraj/webapp.zip --ignore-hidden-files --region ap-south-1"
             }
         }
