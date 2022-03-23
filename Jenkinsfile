@@ -14,20 +14,9 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        // stage('Public test') {
-        //     steps {
-                
-        //         junit '**/target/surefire-reports/TEST-*.xml'
-        //         jacoco()
-        //     }
-        // }
         
         stage('Deploy') {
             steps {
-                
-                sh 'echo "Hello"'
-                sh 'ls'
-                sh 'pwd'
                 sh 'sudo cp webapp/target/webapp.war .'
                 sh 'sudo rm -rf Dockerfile README.md pom.xml server/ webapp Jenkinsfile'
                 sh "sudo zip webapp.zip webapp.war"
